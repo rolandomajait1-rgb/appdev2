@@ -6,10 +6,8 @@ import FlexDimensionsSection from './components/FlexDimensionsSection';
 import PercentageDimensionsSection from './components/PercentageDimensionsSection';
 
 export default function App() {
-
   return (
     <View style={styles.container}>
-
       <StyleSection />
       <FixedDimensionsSection />
       <FlexDimensionsSection />
@@ -17,3 +15,11 @@ export default function App() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+
