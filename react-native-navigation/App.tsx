@@ -45,6 +45,15 @@ function DetailsScreen({ route }) {
       >
         Go to Details... again
       </Button>
+      <Button
+        onPress={() =>
+          navigation.setParams({
+            itemId: Math.floor(Math.random() * 100),
+          })
+        }
+      >
+        Update the param
+      </Button>
     </View>
   );
 }
