@@ -2,11 +2,6 @@
 import { query, mutation } from "./_generated/server";
 import { v } from "convex/values";
 
-/**
- * Fetch all todos from the database.
- * The useQuery hook in React will automatically re-run 
- * whenever this data changes.
- */
 export const get = query({
     args: {},
     handler: async (ctx) => {
@@ -14,10 +9,6 @@ export const get = query({
     },
 });
 
-
-/**
- * Add a new todo item.
- */
 export const add = mutation({
     args: { text: v.string() },
     handler: async (ctx, args) => {
@@ -28,9 +19,6 @@ export const add = mutation({
     },
 });
 
-/**
- * Toggle the completion status of a todo.
- */
 export const toggle = mutation({
     args: {
         id: v.id("todos"),
@@ -42,9 +30,7 @@ export const toggle = mutation({
         });
     },
 });
-/**
- * Delete a todo item.
- */
+
 export const remove = mutation({
     args: { id: v.id("todos") },
     handler: async (ctx, args) => {
